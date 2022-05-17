@@ -71,8 +71,14 @@ class FragmentDetails : Fragment(R.layout.fragment_details){
         txtState.text  = state
 
         val terms = preferences.getString("TERMS", "not Found")
-        val txtTerms = requireView().findViewById<TextView>(R.id.txt_agreeTerms)
-        txtTerms.text  =terms
+        if (terms == "true"){
+            val txtTerms = requireView().findViewById<TextView>(R.id.txt_agreeTerms)
+            txtTerms.text  ="Yes"
+        }else{
+            val txtTerms = requireView().findViewById<TextView>(R.id.txt_agreeTerms)
+            txtTerms.text  ="Not"
+        }
+
 
 
 
