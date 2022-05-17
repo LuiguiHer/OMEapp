@@ -4,11 +4,11 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SwitchCompat
-import com.google.android.material.textfield.TextInputLayout
+
 
 class SignUp : AppCompatActivity() {
 
@@ -30,11 +30,11 @@ class SignUp : AppCompatActivity() {
             val email = findViewById<AutoCompleteTextView>(R.id.autoEmail_address).text.toString()
             val year = findViewById<Spinner>(R.id.spinner_years).selectedItem.toString()
             val month = findViewById<Spinner>(R.id.spinner_month).selectedItem.toString()
-            val day = findViewById<EditText>(R.id.number_day).toString()
-            val street = findViewById<TextInputLayout>(R.id.textInputLayout).toString()
-            val city = findViewById<TextInputLayout>(R.id.textInputLayout2).toString()
+            val day = findViewById<EditText>(R.id.txt_day).text.toString()
+            val street = findViewById<EditText>(R.id.streetAddress).text.toString()
+            val city = findViewById<EditText>(R.id.city).text.toString()
             val state = findViewById<Spinner>(R.id.spn_state).selectedItem.toString()
-            val terms = findViewById<SwitchCompat>(R.id.agreeT).isChecked
+            val terms = findViewById<SwitchCompat>(R.id.agreeT).isChecked.toString()
 
             val editor: SharedPreferences.Editor = sharedPreferences.edit()
             editor.putString("NAME", name)
@@ -46,7 +46,7 @@ class SignUp : AppCompatActivity() {
             editor.putString("STREET", street)
             editor.putString("CITY", city)
             editor.putString("STATE", state)
-            editor.putBoolean("TERMS", terms)
+            editor.putString("TERMS", terms)
             editor.apply()
 
             Toast.makeText(this, "Successful Registration", Toast.LENGTH_SHORT).show()

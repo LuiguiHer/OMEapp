@@ -7,67 +7,52 @@
     tools:context=".Welcome"
     android:background="@drawable/background_register"
     >
-
-    <ImageView
-        android:id="@+id/image_c"
-        android:layout_width="336dp"
-        android:layout_height="218dp"
-        app:layout_constraintEnd_toEndOf="parent"
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="75dp"
-        android:src="@drawable/success_r"
-        app:layout_constraintHorizontal_bias="0.5"
-        android:contentDescription="@string/app_name" />
-
-    <ImageView
-        android:layout_width="307dp"
-        android:layout_height="388dp"
-        android:src="@drawable/character_welcome"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/app_name" />
-
-    <TextView
-        android:id="@+id/text_welcome"
-        android:layout_width="300dp"
-        android:layout_height="65dp"
-        android:text="@string/welcome"
-        android:textAlignment="center"
-        android:fontFamily="@font/poppins_medium"
-        android:textSize="48sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image_c"
-        android:layout_marginTop="45dp"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:id="@+id/fragment_welcome"
         />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="143dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/success_r"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_newLogin"
         android:layout_width="wrap_content"
         android:layout_height="49dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginBottom="90dp"
         android:background="@drawable/btn_back_login"
         android:text="@string/login"
         android:textColor="#EC8C00"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.19"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo_ome"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
+<Button
+        android:id="@+id/btndetails"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:layout_marginBottom="90dp"
+        android:background="@drawable/button_login"
+        android:text="@string/details"
+        android:textColor="#EC8C00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextContrastCheck,TextContrastCheck" />
 
-    <ImageView
-        android:id="@+id/logo_ome"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_welcome"
-        android:layout_marginTop="-40dp"
-        android:src="@drawable/logome"
-        android:contentDescription="@string/app_name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

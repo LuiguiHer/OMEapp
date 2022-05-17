@@ -22,9 +22,15 @@
     <string name="day">Day</string>
     <string name="agree">Agree Terms</string>
     <string name="or">OR</string>
+    <string name="details">Details</string>
+    <string name="data">Your Data</string>
+    <string name="state">State</string>
+    <string name="False">false</string>
+
 
 
     <string-array name="years">
+        <item></item>
         <item>1999</item>
         <item>2000</item>
         <item>2001</item>
@@ -38,6 +44,7 @@
     </string-array>
 
     <string-array name="month">
+        <item></item>
         <item>January</item>
         <item>February</item>
         <item>March</item>
@@ -53,6 +60,7 @@
     </string-array>
 
     <string-array name="state">
+        <item></item>
         <item>Amazonas</item>
         <item>Antioquia</item>
         <item>Bogota</item>
@@ -66,5 +74,7 @@
         <item>Santander</item>
         <item>Sucre</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
